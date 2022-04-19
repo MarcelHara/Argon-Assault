@@ -1,23 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     //refs and vars
-    [SerializeField] InputAction movement;
-
-    //Initializing
-    private void OnEnable() // onEnable happens after awake  YOU HAVE TO DO THIS FOR NEW INPUT SYSTEM
-    {
-        movement.Enable();
-    }
-
-    private void OnDisable() // HAVE TO SPECIFY TO DISABLE IT AFTER ITS FINISHED
-    {
-        movement.Disable();
-    }
+    Vector2 moveDirection = Vector2.zero;
+    [SerializeField]float playerSpeed = 5f;
 
     //runtime
     private void Update()
@@ -28,10 +17,9 @@ public class PlayerController : MonoBehaviour
     //Movement
     private void ThrustMovement()
     {
-        float horizontalThrust = movement.ReadValue<Vector2>().x;
-        float verticalThrust = movement.ReadValue<Vector2>().y;
-        Debug.Log(horizontalThrust);
-        Debug.Log(verticalThrust);
+        float xThrust = Input.GetAxis("Horizontal");
+        float yThrust = Input.GetAxis("Vertical");
+        Debug.Log(xThrust);
+        Debug.Log(yThrust);
     }
-
 }

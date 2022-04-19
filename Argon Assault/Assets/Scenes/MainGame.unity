@@ -487,6 +487,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1199579174}
     m_Modifications:
     - target: {fileID: 1943815478, guid: 32335393ea400a44681c8f52b5c52015, type: 3}
+      propertyPath: xOffset
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943815478, guid: 32335393ea400a44681c8f52b5c52015, type: 3}
       propertyPath: movement.m_SingletonActionBindings.Array.size
       value: 5
       objectReference: {fileID: 0}
