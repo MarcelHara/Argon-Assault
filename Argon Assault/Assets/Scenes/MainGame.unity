@@ -535,7 +535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1943815478, guid: 32335393ea400a44681c8f52b5c52015, type: 3}
       propertyPath: yawFactor
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1943815478, guid: 32335393ea400a44681c8f52b5c52015, type: 3}
       propertyPath: rollFactor

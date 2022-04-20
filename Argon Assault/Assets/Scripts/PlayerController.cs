@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     //refs and vars
     [SerializeField] float playerSpeed = 25f;
     [SerializeField] float pitchFactor = 1f;
-    [SerializeField] float yawFactor = 5f;
+    [SerializeField] float yawFactor = 0f;
     [SerializeField] float rollFactor = -50f;
     [SerializeField] float controlPitchFactor = -30f;
     float xThrust;
