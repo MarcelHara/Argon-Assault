@@ -20,12 +20,6 @@ public class PlayerController : MonoBehaviour
         PlayerRotation();
     }
 
-    private void Start()
-    {
-        transform.localPosition = transform.localPosition;
-        transform.localRotation = transform.localRotation;
-    }
-
     //Rotation
     private void PlayerRotation()
     {
@@ -48,11 +42,11 @@ public class PlayerController : MonoBehaviour
 
         float xOffset = xThrust * Time.deltaTime * playerSpeed;
         float newXPos = transform.localPosition.x + xOffset;
-        float clampXPos = Mathf.Clamp(newXPos, -10f, 5f);
+        float clampXPos = Mathf.Clamp(newXPos, -15f, 15f);
 
         float yOffset = yThrust * Time.deltaTime * playerSpeed;
         float newYPos = transform.localPosition.y + yOffset;
-        float clampYPos = Mathf.Clamp(newYPos, -17f, -8f);
+        float clampYPos = Mathf.Clamp(newYPos, -16f, -2f);
 
         transform.localPosition = new Vector3(clampXPos, clampYPos, transform.localPosition.z);
     }
