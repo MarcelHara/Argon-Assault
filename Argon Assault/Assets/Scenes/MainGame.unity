@@ -491,8 +491,24 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1943815478, guid: 32335393ea400a44681c8f52b5c52015, type: 3}
+      propertyPath: yawFactor
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943815478, guid: 32335393ea400a44681c8f52b5c52015, type: 3}
+      propertyPath: rollFactor
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943815478, guid: 32335393ea400a44681c8f52b5c52015, type: 3}
+      propertyPath: pitchFactor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943815478, guid: 32335393ea400a44681c8f52b5c52015, type: 3}
       propertyPath: playerSpeed
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943815478, guid: 32335393ea400a44681c8f52b5c52015, type: 3}
+      propertyPath: controlPitchFactor
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 1943815478, guid: 32335393ea400a44681c8f52b5c52015, type: 3}
       propertyPath: movement.m_SingletonActionBindings.Array.size

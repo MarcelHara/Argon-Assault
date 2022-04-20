@@ -5,24 +5,46 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     //refs and vars
-    [SerializeField]float playerSpeed = 25f;
+    [SerializeField] float playerSpeed = 25f;
+    [SerializeField] float pitchFactor = 1f;
+    [SerializeField] float yawFactor = 5f;
+    [SerializeField] float rollFactor = -50f;
+    [SerializeField] float controlPitchFactor = -30f;
+    float xThrust;
+    float yThrust;
 
     //runtime
     private void Update()
     {
         ThrustMovement();
+        PlayerRotation();
     }
 
     private void Start()
     {
-        transform.localPosition = new Vector3(0, -25, 0); // fixes the position of the object when the timeline edits it
+        transform.localPosition = transform.localPosition;
+        transform.localRotation = transform.localRotation;
+    }
+
+    //Rotation
+    private void PlayerRotation()
+    {
+        float pitchPositionSetter = transform.localPosition.y * pitchFactor;
+        float pitchPlayerInputReciever = yThrust * controlPitchFactor;
+        float pitch = pitchPositionSetter + pitchPlayerInputReciever;
+
+        float yaw = transform.localPosition.x * yawFactor;
+
+        float roll = xThrust * rollFactor;
+
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
     //Movement
     private void ThrustMovement()
     {
-        float xThrust = Input.GetAxis("Horizontal");
-        float yThrust = Input.GetAxis("Vertical");
+        xThrust = Input.GetAxis("Horizontal");
+        yThrust = Input.GetAxis("Vertical");
 
         float xOffset = xThrust * Time.deltaTime * playerSpeed;
         float newXPos = transform.localPosition.x + xOffset;
