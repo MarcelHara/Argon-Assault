@@ -56,11 +56,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b595f5e7842d7ab4e92a741a3c5a3121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 25
-  pitchFactor: 1
-  yawFactor: 0
-  rollFactor: -50
-  controlPitchFactor: -30
+  movement:
+    m_Name: Movement
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6410f34a-9af4-4494-832c-c592580e426c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
 --- !u!1001 &436882478207080490
 PrefabInstance:
   m_ObjectHideFlags: 0
