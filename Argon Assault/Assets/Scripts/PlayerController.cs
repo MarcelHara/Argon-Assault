@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float yawFactor = 0f;
     [SerializeField] float rollFactor = -50f;
     [SerializeField] float controlPitchFactor = -30f;
+    [SerializeField] GameObject[] lasers;  // array for the lasers
     float xThrust;
     float yThrust;
 
@@ -18,6 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         ThrustMovement();
         PlayerRotation();
+        Firing();
     }
 
     //Rotation
@@ -49,5 +52,32 @@ public class PlayerController : MonoBehaviour
         float clampYPos = Mathf.Clamp(newYPos, -16f, -2f);
 
         transform.localPosition = new Vector3(clampXPos, clampYPos, transform.localPosition.z);
+    }
+
+    // Firing Mechanic
+
+    /// <summary>
+    /// 0 Near get mousebuttondown is left click, 1 is right click and 2 is middle mouse.
+    /// </summary>
+    private void Firing()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            LasersOn();
+        }
+        else
+        {
+            LasersOff();
+        }
+    }
+
+    private void LasersOff()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void LasersOn()
+    {
+        throw new NotImplementedException();
     }
 }
