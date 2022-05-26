@@ -671,6 +671,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1470532471730119154, guid: 8c553604afc6ae6408568c7df53e2932, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470532471730119154, guid: 8c553604afc6ae6408568c7df53e2932, type: 3}
       propertyPath: TrailModule.worldSpace
       value: 0
       objectReference: {fileID: 0}

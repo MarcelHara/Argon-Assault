@@ -63,30 +63,26 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButton("Fire1"))
         {
-            LasersOn();
+            LaserController(true);
         }
         else
         {
-            LasersOff();
+            LaserController(false);
         }
     }
 
-    // turns on laser array to make laser particles fire
-    private void LasersOn()
+    /// <summary>
+    /// We add a param to the method so we dont have to duplicate the method twice just to change the emitionModule from true or false.
+    /// Instead we pass a paramater called isEnabled and where you would enable with true you rename that with the paramater we have chosen.
+    /// </summary>
+    /// <param name="isEnabled"></param>
+    private void LaserController(bool isEnabled)
     {
         // for every gameobject (anyName) in our var lasers we made, then do something
         foreach(GameObject allLasers in lasers)
         {
-            allLasers.SetActive(true); 
-        }
-    }
-
-    // turns off laser array to make laser particles not show
-    private void LasersOff()
-    {
-        foreach(GameObject allLasers in lasers)
-        {
-            allLasers.SetActive(false); // setactive is to disable the object or enable it
+            var emitionModule = allLasers.GetComponentInChildren<ParticleSystem>().emission;
+            emitionModule.enabled = isEnabled;
         }
     }
 }
