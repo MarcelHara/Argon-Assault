@@ -6,11 +6,18 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     //refs and vars
+    [Header("General Settings for PlayerController")] // header for the editor to say general settings when looking at this script
+    [Tooltip("How fast the ship is moving up and down")]
     [SerializeField] float playerSpeed = 25f;
+    [Tooltip("How much the ship is pitching")]
     [SerializeField] float pitchFactor = 1f;
+    [Tooltip("How much the ship is Yawing")]
     [SerializeField] float yawFactor = 0f;
+    [Tooltip("How much the ship is rolling")]
     [SerializeField] float rollFactor = -50f;
+    [Header("Maincontroller for ship pitch")]
     [SerializeField] float controlPitchFactor = -30f;
+    [Header("The laser particle system Controller")]
     [SerializeField] GameObject[] lasers;  // array for the lasers
     float xThrust;
     float yThrust;
