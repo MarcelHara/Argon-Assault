@@ -71,13 +71,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void LasersOff()
-    {
-        throw new NotImplementedException();
-    }
-
+    // turns on laser array to make laser particles fire
     private void LasersOn()
     {
-        throw new NotImplementedException();
+        // for every gameobject (anyName) in our var lasers we made, then do something
+        foreach(GameObject allLasers in lasers)
+        {
+            allLasers.SetActive(true);
+        }
+    }
+
+    // turns off laser array to make laser particles not show
+    private void LasersOff()
+    {
+        foreach (GameObject allLasers in lasers)
+        {
+            allLasers.SetActive(false);
+        }
     }
 }
