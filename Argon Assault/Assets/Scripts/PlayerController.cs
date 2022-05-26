@@ -77,16 +77,16 @@ public class PlayerController : MonoBehaviour
         // for every gameobject (anyName) in our var lasers we made, then do something
         foreach(GameObject allLasers in lasers)
         {
-            allLasers.SetActive(true);
+            allLasers.SetActive(true); 
         }
     }
 
     // turns off laser array to make laser particles not show
     private void LasersOff()
     {
-        foreach (GameObject allLasers in lasers)
+        foreach(GameObject allLasers in lasers)
         {
-            allLasers.SetActive(false);
+            allLasers.SetActive(false); // setactive is to disable the object or enable it
         }
     }
 }
