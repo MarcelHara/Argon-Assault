@@ -1,2 +1,2 @@
 # Argon-Assault
-Argon Assault, Learning more unity using new mechanics I have never covered before
+Small mini-game programming how timelines can be used with code to create a simple 3rd person ship shooter game.
